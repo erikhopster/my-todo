@@ -1,0 +1,13 @@
+FROM node:15.3.0
+
+WORKDIR "/app"
+
+COPy ./package.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
